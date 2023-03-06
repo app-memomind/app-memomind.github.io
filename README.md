@@ -1,1 +1,0 @@
-# app-memomind.github.io
