@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>404 Page Not Found</title>
-    <style>
-      body {
-        background-color: #f1f1f1;
-        font-family: Arial, sans-serif;
-      }
-      
-        .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 100px;
-  }
+<head>
+<!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-  h1 {
-    font-size: 72px;
-    margin-bottom: 40px;
-    color: #333;
-  }
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-  p {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #666;
-  }
-</style>
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
- </head>
-  <body>
-    <div class="container">
-      <h1>404</h1>
-      <p>Sorry, the page you are looking for could not be found.</p>
-      <p>Please check the URL or try again later.</p>
-    </div>
-  </body>
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+<base href="/"/>
+<meta charset="utf-8"/>
+<meta content="IE=Edge" http-equiv="X-UA-Compatible"/>
+<meta content="Meet Memochat - the chatbot that remembers. Engage in conversations that continuously evolve, as Memochat never forgets and learns from every interaction." name="description"/>
+<!-- iOS meta tags & icons -->
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="memochat_web" name="apple-mobile-web-app-title"/>
+<link href="icons/Icon-192.png" rel="apple-touch-icon"/>
+<!-- Favicon -->
+<link href="memomind.png" rel="icon" type="image/png"/>
+<title>Memochat | A Chatbot with Permanent Memory</title>
+<link href="manifest.json" rel="manifest"/>
+<script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "3155426811";
+  </script>
+<!-- This script adds the flutter initialization JS code -->
+<script defer="" src="flutter.js"></script>
+</head>
+<body>
+<script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
